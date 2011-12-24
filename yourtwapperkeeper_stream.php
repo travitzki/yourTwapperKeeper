@@ -25,8 +25,8 @@ class DynamicTrackConsumer extends Phirehose
         $values_array[] = $status['text'];                          // text
         $values_array[] = $status['in_reply_to_user_id'];           // to_user_id
         $values_array[] = $user['screen_name'];                     // from_user 
-        $values_array[] = $status['id'];                            // id -> unique id of tweet 
-        $values_array[] = $user['id'];                              // from_user_id
+        $values_array[] = $status['id_str'];                            // id -> unique id of tweet 
+        $values_array[] = $user['id_str'];                              // from_user_id
         $values_array[] = $user['lang'];                            // iso_language_code
         $values_array[] = $status['source'];                        // source
         $values_array[] = $user['profile_image_url'];               // profile_img_url
