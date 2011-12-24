@@ -79,7 +79,7 @@ if (in_array($_SESSION['access_token']['screen_name'],$admin_screen_name)) {
 	} else {
 	echo "<a href='stoparchiving.php'><img src='./resources/stop_24.png' alt='Stop Archving' title='Stop Archiving'/></a>";
 	}
-	echo "<b>".$archiving_status[1]."<b>";
+	echo "<b>".$archiving_status[1]."</b>";
 	}
 ?>
 </p>
