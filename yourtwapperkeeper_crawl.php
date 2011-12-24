@@ -52,7 +52,7 @@ while (TRUE) {
         	$result_check = mysql_query($q_check, $db->connection);
         
         if (mysql_numrows($result_check)==0) {
-        	$q = "insert into z_".$row_archives['id']." values ('twitter-search','".mysql_real_escape_string($temp_text)."','$temp_to_user_id','$temp_from_user','$temp_id','$temp_from_user_id','$temp_iso_language_code','$temp_source','$temp_profile_image_url','$geo_type','$geo_coordinates_0','$geo_coordinates_1','$temp_created_at','".strtotime($temp_created_at)."')";
+        	$q = "insert into z_".$row_archives['id']." values ('twitter-search','".mysql_real_escape_string($temp_text)."','$temp_to_user_id_str','$temp_from_user','$temp_id_str','$temp_from_user_id_str','$temp_iso_language_code','$temp_source','$temp_profile_image_url','$geo_type','$geo_coordinates_0','$geo_coordinates_1','$temp_created_at','".strtotime($temp_created_at)."')";
         	mysql_query($q, $db->connection);
         	echo "[".$row['id']."-".$row['keyword']."] $page_counter - $temp_id - insert\n";
         	} else {echo "$page_counter - $temp_id - duplicate\n";}
